@@ -164,6 +164,7 @@ header_conf.set('GLIB_VERSION_MIN_REQUIRED', '(G_ENCODE_VERSION(@0@,@1@))'.forma
 header_conf.set('GLIB_VERSION_MAX_ALLOWED', '(G_ENCODE_VERSION(@0@,@1@))'.format(glib_min_major, glib_min_minor))
 
 header_conf.set('ENABLE_DRUN', get_option('drun'))
+header_conf.set('ENABLE_NM', get_option('drun'))
 header_conf.set('WINDOW_MODE', get_option('window'))
 
 header_conf.set('ENABLE_WAYLAND', wayland_enabled)
@@ -251,6 +252,7 @@ rofi_sources = files(
         'source/modes/run.c',
         'source/modes/ssh.c',
         'source/modes/drun.c',
+        'source/modes/nm.c',
         'source/modes/dmenu.c',
         'source/modes/combi.c',
         'source/modes/script.c',
@@ -286,6 +288,7 @@ rofi_sources = files(
         'include/modes/ssh.h',
         'include/modes/run.h',
         'include/modes/drun.h',
+        'include/modes/nm.h',
         'include/modes/dmenu.h',
         'include/modes/combi.h',
         'include/modes/script.h',

@@ -692,6 +692,9 @@ static void rofi_collect_modes(void) {
 #ifdef ENABLE_DRUN
   rofi_collectmodes_add(&drun_mode);
 #endif
+#ifdef ENABLE_NM
+  rofi_collectmodes_add(&nm_mode);
+#endif
   rofi_collectmodes_add(&combi_mode);
   rofi_collectmodes_add(&help_keys_mode);
   rofi_collectmodes_add(&file_browser_mode);
